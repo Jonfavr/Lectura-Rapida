@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura Rápida</title>
+    <link rel="stylesheet" href="assets/css/main2_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script defer src="assets/js/index2_script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Lectura Rapida</h1>
+            <ul>
+                <li><a href="#" class="nav-item" data-filter="libros">Libros</a></li>
+                <li><a href="#" class="nav-item" data-filter="autores">Autores</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar..." id="search-input">
+                <div class="search-suggestions" id="search-suggestions"></div>
+                <button id="search-button">Enter</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="books-section">
+            <h2>Libros</h2>
+            <div class="books">
+            </div>
+            <button class="more-button">Ver más</button>
+        </section>
+        <section class="authors-section">
+            <h2>Autores</h2>
+            <div class="authors">
+            </div>
+            <button class="more-button">Ver más</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jonathan Favela</p>
+        <p><a href="pages/nuevo_libro.html">Crear Libro</a></p>
+    </footer>
+</body>
+</html>
