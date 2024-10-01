@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const totalChapters = document.getElementById("total-chapters");
     const focusBtn = document.getElementById("focus");
     const statusBtn = document.getElementById("status");
-e
     const footer = document.getElementById("buttons");
     const regularBackBtn = document.createElement("button");
     const regularForwardBtn = document.createElement("button");
