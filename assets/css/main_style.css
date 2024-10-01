@@ -248,6 +248,10 @@ a:hover {
 
 @media (max-width: 480px) {
     .book, .author {
-        width: 100%;
+        width: calc(50% - 20px);
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
     }
 }

@@ -82,6 +82,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 40px;
     height: 100%;
 }
 
@@ -92,7 +93,6 @@ main {
 }
 
 #word-count {
-    margin-top: 50px;
     font-size: 1rem;
     color: #666;
 }
@@ -112,6 +112,7 @@ footer {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
 
 #palabras {
@@ -153,9 +154,19 @@ input[type=range] {
     height: 34px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
+    .container {
+        height: 90vh;
+    }
+    
+    #word-container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 80%;
+    }
+    
     #word-display {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-bottom: 10px;
     }
 
@@ -163,11 +174,17 @@ input[type=range] {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 90vw;
+    }
+
+    #btn-containter {
         align-items: center;
+        min-width: 90vw;
     }
 
     input[type=range] {
         width: 90vw;
+        max-width: 300px;
     }
 
     #book-title{
@@ -183,6 +200,10 @@ input[type=range] {
     #chapter_title{
         font-size: 1.3rem;
         font-weight: 400;
+    }
+
+    footer {
+
     }
 
 }

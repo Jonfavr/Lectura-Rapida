@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function() {
         index = newIndex;
         const wordsToDisplay = palabras.slice(index, index + 50).join(' ');
         wordDisplay.innerHTML = wordsToDisplay;
-        wordDisplay.style.fontSize = "2rem";
+        wordDisplay.style.fontSize = "5vmin";
         indexPalabra.textContent = index + 1;
         totalWords.textContent = palabras.length;
         guardarProgreso();
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
         index = newIndex;
         const wordsToDisplay = palabras.slice(index, index + 50).join(' ');
         wordDisplay.innerHTML = wordsToDisplay;
-        wordDisplay.style.fontSize = "2rem";
+        wordDisplay.style.fontSize = "5vmin";
         indexPalabra.textContent = index + 1;
         totalWords.textContent = palabras.length;
         guardarProgreso();
@@ -280,6 +280,8 @@ document.addEventListener("DOMContentLoaded", function() {
     statusBtn.addEventListener("click", function() {
         modoRapido = !modoRapido;
         if (modoRapido) {
+            // Remover la clase slow-mode cuando regrese a modo rápido
+            wordDisplay.classList.remove("slow-mode");
             wordDisplay.innerHTML = focoVisual(palabras[index]);
             wordDisplay.style.fontSize = "";
             playPauseBtn.style.display = "";
@@ -291,10 +293,12 @@ document.addEventListener("DOMContentLoaded", function() {
             palabrasPorMinuto.style.display = "";
             statusBtn.innerHTML = '<img src="../assets/img/icons/multiple.png" alt="Multiple">';
         } else {
+            // Agregar la clase slow-mode cuando cambie a modo lento
+            wordDisplay.classList.add("slow-mode");
             const wordsToDisplay = palabras.slice(index, index + 50).join(' ');
             wordDisplay.innerHTML = wordsToDisplay;
-            wordDisplay.style.fontSize = "2rem";
-            wordDisplay.style.width = "50vw";
+            wordDisplay.style.fontSize = "5vmin";
+            wordDisplay.style.width = "calc(80vw-20px)";
             playPauseBtn.style.display = "none";
             backBtn.style.display = "none";
             forwardBtn.style.display = "none";
