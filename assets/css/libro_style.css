@@ -1,0 +1,184 @@
+:root {
+    --background-color: #1b1d1b;
+    --soft-white: #ccc;
+    --text-color: #e0e0e0;
+    --text-dim: #999;
+    --accent-color: #1f7523;
+    --header-bg-color: #28302a;
+    --button-hover: #034118;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a.selected {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid var(--soft-white);
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: var(--button-hover);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    margin-bottom: 80px;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+#book-cover {
+    max-width: 200px;
+    max-height: 300px;
+    margin-right: 1rem;
+    object-fit: cover;
+    border-radius: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#book-description {
+    flex: 1;
+}
+
+#book-title {
+    font-size: 2rem;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+#book-author {
+    font-size: 1.2rem;
+    margin-left: 0;
+}
+
+#book-resume {
+    font-size: 1rem;
+    margin: 10px 15px;
+    width: 90%;
+    color: var(--text-dim);
+}
+
+.chapters {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.chapters h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.chapter {
+    padding: 0.5rem 0;
+}
+
+h2 {
+    color: var(--text-color);
+    margin: 15px;
+}
+
+.chapter a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}

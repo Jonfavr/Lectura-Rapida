@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nuevo Libro</title>
+    <link rel="stylesheet" href="../assets/css/nuevo_libro.css">
+</head>
+<body>
+    <div class="container">
+        <button id="home" onclick="location.href='../index.html'">Home</button>
+        <h1>Crear Nuevo Libro</h1>
+        <form id="book-form">
+            <div id="section-autor">
+                <label for="autor">Autor:</label>
+                <section>
+                    <select id="select-author">
+                        <option value="">Nuevo Autor</option>
+                    </select> 
+                </section>
+                <input type="text" id="autor" name="autor">
+            </div>
+
+            <div id="section-libro">
+                <label for="titulo">Libro:</label>
+                <section>
+                    <select id="select-libro">
+                        <option value="">Nuevo Libro</option>
+                    </select>
+                </section>
+                <input type="text" id="titulo" name="titulo">
+            </div>
+            
+            <div id="section-capitulo">
+                <label for="capitulo">Capítulo:</label>
+                <div id="capitulos-container">
+                    <section class="capitulo-section">
+                        <input type="text" id="capitulo" name="capitulo" placeholder="Nuevo capítulo">
+                        <textarea id="contenido" name="contenido" rows="5" placeholder="Contenido del capítulo"></textarea>
+                    </section>
+                </div>
+                <button id="agregar-capitulo-btn" type="button">Agregar capítulo</button>
+            </div>
+            <br>
+            <button type="submit">Guardar Libro</button>
+        </form>
+    </div>
+
+    <script src="../assets/js/nuevo_libro.js"></script>
+</body>
+</html>

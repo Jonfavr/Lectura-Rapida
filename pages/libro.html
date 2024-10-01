@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro</title>
+    <link rel="stylesheet" href="../assets/css/libro_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script defer src="../assets/js/libro_script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="../index.html">Lectura Rápida</a></h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>Enter</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="book-section">
+            <div class="book-details">
+                <img id="book-cover" src="" alt="Book Cover">
+                <div id="book-description">
+                    <h2 id="book-title"></h2>
+                    <h3 id="book-author"><a id="author-link" href="#">Autor</a></h3>
+                    <p id="book-resume">Descripcion de Libro</p>
+                </div>
+            </div>
+            <hr>
+            <h2>Capitulos</h2>
+            <div class="chapters">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jonathan Favela</p>
+    </footer>
+</body>
+</html>

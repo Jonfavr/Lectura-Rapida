@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!authorsSet.has(row.id_autor)) {
                     authorsSet.add(row.id_autor);
                     const authorImgPath = `../assets/img/autores/${row.autor_Libro}.webp`;
-                    authorsHTML += `<a href="pages/autor2.html?id_autor=${row.id_autor}&autor_Libro=${row.autor_Libro}" class="author">
+                    authorsHTML += `<a href="pages/autor.html?id_autor=${row.id_autor}&autor_Libro=${row.autor_Libro}" class="author">
                                         <img src="${authorImgPath}" alt="${row.autor_Libro}">
                                         <h3>${row.autor_Libro}</h3>
                                     </a>`;
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!booksSet.has(bookIdentifier)) {
                     booksSet.add(bookIdentifier);
                     const bookImgPath = `../assets/img/libros/${row.autor_Libro}-${row.titulo_Libro}.webp`;
-                    booksHTML += `<a href="pages/libro2.html?id_libro=${row.id_libro}&titulo_Libro=${row.titulo_Libro}&autor_Libro=${row.autor_Libro}" class="book">
+                    booksHTML += `<a href="pages/libro.html?id_libro=${row.id_libro}&titulo_Libro=${row.titulo_Libro}&autor_Libro=${row.autor_Libro}" class="book">
                                     <img src="${bookImgPath}" alt="${row.titulo_Libro}">
                                     <h3>${row.titulo_Libro}</h3>
                                     <p>${row.autor_Libro}</p>
@@ -125,9 +125,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 suggestionItem.textContent = `${result.type === 'autor' ? 'Autor' : 'Libro'}: ${result.name}`;
                 suggestionItem.addEventListener('click', () => {
                     if (result.type === 'autor') {
-                        window.location.href = `pages/autor2.html?id_autor=${result.id}&autor_Libro=${result.name}`;
+                        window.location.href = `pages/autor.html?id_autor=${result.id}&autor_Libro=${result.name}`;
                     } else {
-                        window.location.href = `pages/libro2.html?id_libro=${result.id}&titulo_Libro=${result.name}&autor_Libro=${result.autor}`;
+                        window.location.href = `pages/libro.html?id_libro=${result.id}&titulo_Libro=${result.name}&autor_Libro=${result.autor}`;
                     }
                 });
                 searchSuggestions.appendChild(suggestionItem);

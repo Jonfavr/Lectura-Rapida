@@ -1,0 +1,188 @@
+:root {
+    --background-color: #1b1d1b;
+    --text-color: #e0e0e0;
+    --accent-color: #1f7523;
+    --header-bg-color: #28302a;
+    --button-hover: #034118;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-info, .chapter-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#book-title, #author, #chapter_title, #chapter-progress {
+    margin: 5px 0;
+}
+
+#book-title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#author {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+#chapter_title{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#book-title a, #author a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2 ease;
+}
+
+#book-title a:hover, #author a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#word-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#word-display {
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#word-count {
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #666;
+}
+
+#btn-containter {
+    width: 50%;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#palabras {
+    margin-bottom: 5px;
+}
+
+#speed-control {
+    width: 100%;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.control-btn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(90%);
+}
+
+.control-btn img:hover {
+    filter: invert(70%);
+}
+
+input[type=range] {
+    accent-color: var(--accent-color);
+    width: 50vw;
+    max-width: 800px;
+    height: 34px;
+}
+
+@media only screen and (max-width: 600px) {
+    #word-display {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type=range] {
+        width: 90vw;
+    }
+
+    #book-title{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    #author {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    
+    #chapter_title{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+}

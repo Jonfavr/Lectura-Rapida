@@ -1,0 +1,210 @@
+:root {
+    --background-color: #1b1d1b;
+    --soft-white: #ccc;
+    --text-color: #e0e0e0;
+    --text-dim: #999;
+    --accent-color: #1f7523;
+    --header-bg-color: #28302a;
+    --button-hover: #034118;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a.selected {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid var(--soft-white);
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: var(--button-hover);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    margin-bottom: 80px;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+#author-image {
+    max-width: 150px;
+    max-height: 200px;
+    margin-right: 1rem;
+    object-fit: cover;
+    border-radius: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#author-description {
+    flex: 1;
+}
+
+#author-name {
+    font-size: 2rem;
+    margin: 0;
+}
+
+#author-resume {
+    font-size: 1rem;
+    margin: 10px 15px;
+    width: 90%;
+    color: var(--text-dim);
+}
+
+.books {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.books h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.book {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.book img {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+    margin-right: 1rem;
+    border-radius: 2%;
+}
+
+.book img:hover {
+    box-shadow: 0px 0px 20px 5px var(--button-hover);
+}
+
+.book a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.book a:hover {
+    color: var(--accent-color);
+}
+
+.book h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.book p {
+    margin: 0;
+    color: var(--text-dim);
+}
+
+h2 {
+    color: var(--text-color);
+    margin: 15px;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}

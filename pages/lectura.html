@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/lectura_style.css">
+    <title>Lectura Rápida</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="book-info">
+                    <h1 id="book-title"><a id="book-title-link" href="#">Nombre del Libro</a></h1>
+                    <h3 id="author"><a id="author-link" href="#">Nombre del Autor</a></h3>
+                    <h2 id="chapter_title">Titulo Capitulo</h2>
+                </div>
+                <div id="btn-containter">
+                    <button id="anterior" class="control-btn"><img src="../assets/img/icons/previous.png" alt="Previous"></button>
+                    <button id="focus" class="control-btn"><img src="../assets/img/icons/focus.png" alt="Focus"></button>
+                    <button id="home" class="control-btn" onclick="location.href='../index.html'"><img src="../assets/img/icons/home.png" alt="Home"></button>
+                    <button id="status" class="control-btn"><img src="../assets/img/icons/multiple.png" alt="Multiple"></button>
+                    <button id="siguiente" class="control-btn"><img src="../assets/img/icons/next.png" alt="Next"></button>
+                </div>
+                <div class="chapter-info">
+                    <p id="chapter-progress">Capitulo <span id="current-chapter">1</span> of <span id="total-chapters">5</span></p>
+                </div>
+                
+            </div>
+        </header>
+        <main>
+            <div id="word-container">
+                <div id="word-display">Comenzar</div>
+                <p id="word-count"><span id="word-index">0</span>/<span id="total-words">0</span></p>
+            </div>
+        </main>
+        <footer id="footer">
+            <label for="speed-control" id="palabras">Palabras / min.</label> <br>
+            <input type="range" id="speed-control" min="100" max="700" value="400" step="50">
+            <section id="buttons">
+                <button id="back-btn" class="control-btn"><img src="../assets/img/icons/rewind.png" alt="Back"></button>
+                <button id="play-pause-btn" class="control-btn"><img src="../assets/img/icons/play.png" alt="Play/Pause"></button>
+                <button id="forward-btn" class="control-btn"><img src="../assets/img/icons/forward.png" alt="Forward"></button>
+            </section>
+        </footer>
+    </div>
+    <script src="../assets/js/lectura_script.js"></script>
+</body>
+</html>
+
