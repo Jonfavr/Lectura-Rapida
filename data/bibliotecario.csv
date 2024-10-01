@@ -1,0 +1,31 @@
+id_autor,id_libro,autor_Libro,titulo_Libro
+10001,1000101,Aristoteles,Metafísica
+10001,1000102,Aristoteles,Politica
+10002,1000201,Marco Aurelio,Meditaciones
+10003,1000301,Edgar Allan Poe,El Corazón Delator
+10003,1000302,Edgar Allan Poe,Annabel Lee
+10004,1000401,Platón,Menón o De La Virtud
+10004,1000402,Platón,Carmides o De La Sabiduría
+10004,1000403,Platón,La República
+10005,1000501,Sören Kierkegaard,Diario De Un Seductor
+10006,1000601,Karl Marx,El Capital - Volumen I
+10006,1000602,Karl Marx,El Capital - Volumen II
+10006,1000603,Karl Marx,El Capital - Volumen III
+10006,1000604,Karl Marx,El Capital - Volumen IV
+10006,1000605,Karl Marx,El Capital - Volumen V
+10006,1000606,Karl Marx,El Capital - Volumen VI
+10006,1000607,Karl Marx,El Capital - Volumen VII
+10006,1000608,Karl Marx,El Capital - Volumen VIII
+10006,1000609,Karl Marx,Manifiesto Comunista
+10007,1000701,Dante Alighieri,La Divina Comedia
+10007,1000702,Dante Alighieri,El Convivio
+10008,1000801,Friederich Nietzsche,Más Allá Del Bien Y Del Mal
+10008,1000802,Friederich Nietzsche,El Anticristo
+10008,1000802,Friederich Nietzsche,La Genealogía De La Moral
+10009,1000901,Lucio Anneo Séneca,Sobre La Felicidad
+10009,1000902,Lucio Anneo Séneca,De La Ira
+10010,1001001,Arthur Schopenhauer,Los Dolores Del Mundo
+10011,1001101,Howard Phillips Lovecraft,El Alquimista
+10011,1001102,Howard Phillips Lovecraft,Los Gatos De Ulthar
+10012,1001201,Chögyam Trungpa,Más Allá Del Materialismo Espiritual
+10013,1001301,Patrik Süskind,El Perfume
