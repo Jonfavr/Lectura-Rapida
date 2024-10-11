@@ -160,34 +160,56 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function reproducir() {
-        paused = false
+        paused = false;
         const velocidad = parseInt(speedControl.value);
-
-        intervalId = setInterval(() => {
-            if (!paused) {
-                if (modoRapido) {
-                    wordDisplay.innerHTML = focoVisual(palabras[index]);
-                } else {
-                    const wordsToDisplay = palabras.slice(index, index + 50).join(' ');
-                    wordDisplay.innerHTML = wordsToDisplay;
-                    wordDisplay.style.fontSize = "2rem";
-                }
-                indexPalabra.textContent = index + 1;
-                totalWords.textContent = palabras.length;
-                guardarProgreso(capituloId);
-                index++;
-                if (index >= palabras.length) {
-                    index = 0;
-                    clearInterval(intervalId);
-                    eliminarProgreso(capituloId);
-                }
+        
+        function avanzarConPausa() {
+            if (paused || index >= palabras.length) {
+                clearTimeout(intervalId); 
+                return;
             }
-        }, 60000 / velocidad);
+    
+            const palabraActual = palabras[index];
+    
+            const pausaComa = Math.max(1000 * (100 / velocidad), 300);
+            const pausaPunto = Math.max(1500 * (100 / velocidad), 500);
+            let delay = 60000 / velocidad;
+
+            if (palabraActual.includes(',')) {
+                delay += pausaComa;
+            } else if (palabraActual.includes('.')) {
+                delay += pausaPunto;
+            }
+
+            if (modoRapido) {
+                wordDisplay.innerHTML = focoVisual(palabraActual);
+            } else {
+                const wordsToDisplay = palabras.slice(index, index + 50).join(' ');
+                wordDisplay.innerHTML = wordsToDisplay;
+                wordDisplay.style.fontSize = "2rem";
+            }
+            indexPalabra.textContent = index + 1;
+            totalWords.textContent = palabras.length;
+            guardarProgreso(capituloId);
+    
+            index++;
+            if (index < palabras.length) {
+                intervalId = setTimeout(avanzarConPausa, delay);
+            } else {
+                index = 0;
+                eliminarProgreso(capituloId);
+            }
+        }
+    
+        if (!intervalId) {
+            avanzarConPausa();
+        }
     }
 
     function pausar() {
         paused = true;
-        clearInterval(intervalId);
+        clearTimeout(intervalId);
+        intervalId = null;
     }
 
     function avanzar10Palabras() {
